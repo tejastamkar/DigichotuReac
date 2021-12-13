@@ -1,11 +1,15 @@
 {
   "expo": {
-    "name": "Digichotu",
-    "slug": "Digichotu",
+    "name": "DigichotuReac",
+    "slug": "digichotureac",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "description": "testing app by tejas",
+    "ios": {
+      "bundleIdentifier": "com.tejasdev26.digichotureac"
+    }
   },
   "name": "Digichotu"
 }

@@ -1,15 +1,18 @@
 import * as React from "react";
-import { View, Text, Image, ScrollView } from "react-native";
+import { FlatList } from "react-native";
 import Carousel from "../../Components/Carousel";
-import { dummyData } from "../../Data/ImgData";
+import { carouselData, cardData } from "../../Data/ImgData";
 import { Card } from "../../Components/Cards";
 export default function HomeScreen() {
   return (
-    <>
-      <Carousel data={dummyData} />
-      <ScrollView style={{ backgroundColor: "#fff" }}>
-        <Card data={dummyData} />
-      </ScrollView>
-    </>
+    <FlatList
+      style={{ backgroundColor: "#fff" }}
+      ListHeaderComponent={
+        <>
+          <Carousel data={carouselData} />
+        </>
+      }
+      ListFooterComponent={<Card data={cardData} />}
+    />
   );
 }

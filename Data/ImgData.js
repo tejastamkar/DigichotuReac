@@ -1,23 +1,89 @@
-export const dummyData = [
+export const carouselData = [
   {
-    title: "Hotel-1",
-    url: "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/7/s/v/p73265-15776215315e08981bb0c73.jpg?tr=tr:n-large",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     id: 1,
+    title: "Pop Tate's",
+    url: "https://cdn.eatigo.com/restaurant-cover-image/5001215_panel_934b59dd-b854-4570-8261-9e858075ec28.jpg",
+    description:
+      "Best Place To visit With Family and Friends",
   },
   {
-    title: "Hotel-2",
-    url: "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/7/i/z/p70891-15748457495dde3d3530994.jpg?tr=tr:n-large",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     id: 2,
+    title: "Sky Garden",
+    url: "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/7/g/a/p78481-163487849661724420bbbdb.jpg?tr=tr:n-xlarge",
+    description:
+      "Best Place for Spend evening time With love , Family and Friends",
   },
   {
-    title: "Hotel-3",
-    url: "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/6/a/e/p69767-15742486145dd520a6f275c.jpg?tr=tr:n-large",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     id: 3,
+    title: "The Caravan Menu",
+    url: "https://b.zmtcdn.com/data/pictures/8/18523548/be0c272a0f44396b71a9a8c55ffb75fc.jpg",
+    description:
+      "Top 5 Hotel of Thane",
+  },
+];
+
+export const cardData = [
+  {
+    id: 1,
+    name: "West India Co",
+    url: "https://b.zmtcdn.com/data/pictures/5/18801475/7806555749334f6c191b9cbd04953970.jpeg",
+    address:
+      "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
+    rate: 3,
+  },
+  {
+    id: 2,
+    name: "Mato Mato",
+    url: "https://b.zmtcdn.com/data/pictures/4/19935524/ac6ac45dde5515ca7e20f9148e4c3866.jpg",
+    address:
+      "Solus, 7 to, 12, Hiranandani Estate, Thane West, Mumbai, Maharashtra 400607",
+    rate: 3,
+  },
+  {
+    id: 3,
+    name: "Has South Bombay",
+    url: "https://img4.nbstatic.in/tr:w-500/5bf7a505590801000d7e02ab.jpg",
+    address:
+      "S9/The Walk, Hiranandani Estate Rd, Patlipada, Thane West, Thane, Maharashtra 400607",
+    rate: 3,
+  },
+  {
+    id: 4,
+    name: "Maezo Bistro",
+    url: "https://b.zmtcdn.com/data/reviews_photos/640/d2dd134ee4c97956578adbeb39d1a640_1545656693.jpg",
+    address: "Hiranandani Estate, Thane West,Thane, Maharashtra 400607",
+    rate: 3,
+  },
+  {
+    id: 5,
+    name: `Raaga- Authentic Indian Dining`,
+    url: "https://lh3.googleusercontent.com/Cq4XqBbRRJveY4IJcQz3vlL1SIDignmCYeQEeeRJj1bzTy-dOo54WyJg450G6DOVWVKKFr6QhHSICZcGk8g8MNh3pxxefMkZQnJ6TDnR=w512",
+    address:
+      "Arcadia Cir, Hiranandani Estate,Thane West, Thane, Maharashtra 400607",
+    rate: 3,
+  },
+  {
+    id: 6,
+    name: "Butterfly High",
+    url: "https://luxurylaunches.com/mumbai/wp-content/uploads/2018/08/Interior-Image-Butterfly-High-01.jpg",
+    address:
+      "1st floor, The Unique, Hiranandani Estate Rd,Thane West, Maharashtra 400607",
+    rate: 3,
+  },
+  {
+    id: 7,
+    name: "Chulha Village",
+    url: "https://b.zmtcdn.com/data/pictures/2/18705042/00988eb68c635326b622c9be33e7c3d3.jpg",
+    address:
+      "Shop no 12/13,the walk, Ghodbunder Rd,Hiranandani Estate, Thane,Maharashtra 400607",
+    rate: 3,
+  },
+  {
+    id: 8,
+    name: "GRAVITY",
+    url: "https://cdn.venuelook.com/uploads/space_14359/1526038655_595x400.png",
+    address:
+      "Om manusmriti CHS Ltd, Kavesar,Ghodbunder Rd, Dongripada, Thane West,Thane, Maharashtra 400607",
+    rate: 3,
   },
 ];
