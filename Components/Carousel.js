@@ -5,6 +5,7 @@ import {
   Dimensions,
   FlatList,
   Animated,
+  SafeAreaView,
 } from "react-native";
 import CarouselItem from "./Carouselitem";
 
@@ -40,7 +41,7 @@ const Carousel = ({ data }) => {
 
   if (data && data.length) {
     return (
-      <View>
+      <SafeAreaView>
         <FlatList
           data={data}
           ref={(flatList) => {
@@ -52,16 +53,16 @@ const Carousel = ({ data }) => {
           scrollEnabled
           snapToAlignment="center"
           scrollEventThrottle={16}
-          decelerationRate={"fast"}
+          decelerationRate={"normal"}
           showsHorizontalScrollIndicator={false}
           renderItem={({ item }) => {
             return <CarouselItem item={item} />;
           }}
-          onScroll={Animated.event([
-            { nativeEvent: { contentOffset: { x: scrollX } } },
-          ],{useNativeDriver: false})}
+          onScroll={Animated.event(
+            [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+            { useNativeDriver: false }
+          )}
         />
-
         <View style={styles.dotView}>
           {data.map((_, i) => {
             let opacity = position.interpolate({
@@ -84,7 +85,7 @@ const Carousel = ({ data }) => {
             );
           })}
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 
