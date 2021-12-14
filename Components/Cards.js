@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
     shadowColor: "#000",
     shadowOpacity: 10,
     shadowOffset: { width: 0.8, height: 0.3 },
+    elevation: 5,
   },
   cardImage: {
     width: "100%",

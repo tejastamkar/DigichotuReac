@@ -8,7 +8,7 @@ import HomeScreen from "./Screen/HomeScreen";
 import ProfileScreen from "./Screen/ProfileScreen";
 import ReelScreen from "./Screen/ReelScreen";
 import NotiflyScreen from "./Screen/NotiflyScreen";
-import ReviewScreen from "../Screens/Review/ReviewScreen";
+import { ReviewScreen } from "../Screens/Review/ReviewScreen";
 
 //Screens Names
 const Home = "Digi Chotu";
@@ -21,7 +21,7 @@ const Stack = createStackNavigator();
 
 function Home_Review() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Home">
       <Stack.Screen
         options={{ headerTitleAlign: "center", title: "Digi Chotu" }}
         name="Home"

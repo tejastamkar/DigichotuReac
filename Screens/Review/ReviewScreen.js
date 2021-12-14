@@ -1,22 +1,38 @@
 import * as React from "react";
-import { View, Text, Image, StyleSheet, Dimensions } from "react-native";
+import { View, Image, StyleSheet, Dimensions, FlatList } from "react-native";
 import HotelReview from "./HotelReview";
-import { ReviewTab } from "./ReviewTab";
-import { UserReview } from "./UserReview";
 import { Users } from "../../Data/UserData";
+import { UserReview } from "./UserReview";
 
 const { width, height } = Dimensions.get("window");
-export default function ReviewScreen({ route, navigation }) {
+export function ReviewScreen({ route }) {
   const { item } = route.params;
   return (
-    <View>
-      <View style={styles.cardView}>
-        <Image style={styles.image} source={{ uri: item.url }} />
-      </View>
-      {/* <ReviewTab data={item} /> */}
-      {/* <UserReview data={Users} /> */}
-      <HotelReview item={item} />
-    </View>
+    <FlatList
+      style={{ backgroundColor: "#fff" }}
+      ListHeaderComponent={
+        <>
+          <View style={styles.cardView}>
+            <Image style={styles.image} source={{ uri: item.url }} />
+          </View>
+        </>
+      }
+      ListFooterComponent={
+        <>
+          <HotelReview item={item} />
+          <View
+            style={{
+              flex: 1,
+              height: 1,
+              backgroundColor: "black",
+              marginBottom: 20,
+              marginTop: 20,
+            }}
+          />
+          <UserReview data={Users} />
+        </>
+      }
+    />
   );
 }
 
