@@ -2,22 +2,23 @@ import React from "react";
 import {
   Image,
   Text,
-  TouchableOpacity,
   View,
   StyleSheet,
   FlatList,
   Dimensions,
+  Button,
+  TouchableOpacity,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
+
 const { width, heigth } = Dimensions.get("window");
 const numcol = 2;
 const CardItems = ({ item }) => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
       style={styles.card}
-      onPress={() => {
-        alert("You tapped the button!");
-      }}
+      onPress={() => navigation.navigate("Review", { item })}
     >
       <Image
         style={styles.cardImage}
@@ -30,6 +31,7 @@ const CardItems = ({ item }) => {
         <Text style={styles.itemTitle}>{item.name}</Text>
         <Text style={styles.itemRate}>Rating: {item.rate}/5</Text>
         <Text style={styles.itemDescription}>{item.address}</Text>
+        {/* <Button title="Press me" onPress={pressHandler} /> */}
       </View>
     </TouchableOpacity>
   );

@@ -1,18 +1,25 @@
 import React from "react";
-import { View, StyleSheet, Text, Image, Dimensions } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+} from "react-native";
 
 const { width, height } = Dimensions.get("window");
 
 const CarouselItem = ({ item }) => {
   return (
-    <View style={styles.cardView}>
+    <TouchableOpacity style={styles.cardView}>
       <Image style={styles.image} source={{ uri: item.url }} />
 
       <View style={styles.textView}>
         <Text style={styles.itemTitle}> {item.title}</Text>
         <Text style={styles.itemDescription}>{item.description}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -40,7 +47,7 @@ const styles = StyleSheet.create({
     width: width - 20,
     height: height / 4,
     borderRadius: 10,
-    opacity:0.7,
+    opacity: 0.7,
   },
   itemTitle: {
     color: "white",

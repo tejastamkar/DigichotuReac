@@ -2,11 +2,13 @@ import * as React from "react";
 import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "./Screen/HomeScreen";
 import ProfileScreen from "./Screen/ProfileScreen";
 import ReelScreen from "./Screen/ReelScreen";
 import NotiflyScreen from "./Screen/NotiflyScreen";
+import ReviewScreen from "../Screens/Review/ReviewScreen";
 
 //Screens Names
 const Home = "Digi Chotu";
@@ -15,6 +17,20 @@ const Reel = "Shots";
 const Notifly = "Notifly";
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+function Home_Review() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        options={{ headerTitleAlign: "center", title: "Digi Chotu" }}
+        name="Home"
+        component={HomeScreen}
+      />
+      <Stack.Screen name="Review" component={ReviewScreen} />
+    </Stack.Navigator>
+  );
+}
 
 function MainContainer() {
   return (
@@ -22,7 +38,7 @@ function MainContainer() {
       <Tab.Navigator
         initialRouteName={Home}
         screenOptions={({ route }) => ({
-          headerTitleAlign:"center",
+          headerTitleAlign: "center",
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
             let rn = route.name;
@@ -44,7 +60,11 @@ function MainContainer() {
           tabBarInactiveTintColor: "gray",
         })}
       >
-        <Tab.Screen name={Home} component={HomeScreen} />
+        <Tab.Screen
+          options={{ headerShown: false }}
+          name={Home}
+          component={Home_Review}
+        />
         <Tab.Screen name={Reel} component={ReelScreen} />
         <Tab.Screen
           name={Notifly}

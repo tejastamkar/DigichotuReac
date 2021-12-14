@@ -1,9 +1,9 @@
 import * as React from "react";
-import { FlatList } from "react-native";
+import { FlatList, Button } from "react-native";
 import Carousel from "../../Components/Carousel";
 import { carouselData, cardData } from "../../Data/ImgData";
 import { Card } from "../../Components/Cards";
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <FlatList
       style={{ backgroundColor: "#fff" }}
@@ -12,7 +12,11 @@ export default function HomeScreen() {
           <Carousel data={carouselData} />
         </>
       }
-      ListFooterComponent={<Card data={cardData} />}
+      ListFooterComponent={
+        <>
+          <Card data={cardData} />
+        </>
+      }
     />
   );
 }

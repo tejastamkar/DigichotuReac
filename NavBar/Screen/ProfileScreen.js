@@ -1,5 +1,12 @@
 import * as React from "react";
-import { View, Text, Image, StyleSheet, Dimensions } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  Dimensions,
+  Button,
+} from "react-native";
 
 const { width, height } = Dimensions.get("window");
 export default function ProfileScreen({ navgiation }) {
@@ -23,6 +30,7 @@ export default function ProfileScreen({ navgiation }) {
         <Text style={styles.Username}>TestUser</Text>
         <Text style={styles.Userbio}>UserBio</Text>
         <Text style={styles.Points}>Points 300</Text>
+        {/* <Button>"Go back Home"</Button> */}
       </View>
     </View>
   );
