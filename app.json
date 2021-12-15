@@ -11,10 +11,11 @@
       "bundleIdentifier": "com.tejasdev26.digichotureac"
     },
     "splash": {
-      "image": "./Images/logo/digichotu.png",
+      "image": "./Images/logo/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#fff"
-    }
+    },
+    "icon": "./Images/logo/digichotu.png"
   },
   "name": "Digichotu"
 }
