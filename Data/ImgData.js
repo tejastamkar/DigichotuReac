@@ -1,22 +1,40 @@
 export const carouselData = [
   {
     id: 1,
-    title: "Pop Tate's",
+    name: "Pop Tate's",
     url: "https://cdn.eatigo.com/restaurant-cover-image/5001215_panel_934b59dd-b854-4570-8261-9e858075ec28.jpg",
     description: "Best Place To visit With Family and Friends",
+    address:
+      "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
+    rate: 3,
+    cost: "$$",
+    type: "Restro & Bar",
+    food: "V/N",
   },
   {
     id: 2,
-    title: "Sky Garden",
+    name: "Sky Garden",
     url: "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/7/g/a/p78481-163487849661724420bbbdb.jpg?tr=tr:n-xlarge",
     description:
       "Best Place for Spend evening time With love , Family and Friends",
+    address:
+      "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
+    rate: 5,
+    cost: "$$$",
+    type: "Restro & Bar",
+    food: "V/N",
   },
   {
     id: 3,
-    title: "The Caravan Menu",
+    name: "The Caravan Menu",
     url: "https://b.zmtcdn.com/data/pictures/8/18523548/be0c272a0f44396b71a9a8c55ffb75fc.jpg",
     description: "Top 5 Hotel of Thane",
+    address:
+      "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
+    rate: 4,
+    cost: "$$$",
+    type: "Restro & Bar",
+    food: "V/N",
   },
 ];
 

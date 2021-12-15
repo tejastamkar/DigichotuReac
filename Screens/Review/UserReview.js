@@ -1,5 +1,5 @@
 import * as React from "react";
-import { render } from "react-dom";
+
 import {
   View,
   Text,
@@ -10,15 +10,14 @@ import {
 } from "react-native";
 
 const { width, heigth } = Dimensions.get("window");
-let imageurl = {
-  uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPjkW6L6Fi2RYRQtGGPZeDA_Qt0qADmENA6A&usqp=CAUS",
-};
+
 const UserList = ({ item }) => {
   return (
     <View style={styles.cards}>
-      <View style={styles.circle}>
-        <Image style={styles.cardImage} source={imageurl} />
-      </View>
+      <Image
+        style={styles.circle}
+        source={require("../../Images/Images/Photo.png")}
+      />
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.reviewtxt}>{item.review}</Text>
     </View>
@@ -52,6 +51,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#000",
     borderRadius: 30,
     marginLeft: 20,
+    marginTop: 20,
+    position: "absolute",
   },
   image: {
     width: "100%",
@@ -64,15 +65,14 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     width: width - 20,
     // paddingVertical: 25,
-    height: 120,
+    height: 90,
     backgroundColor: "#FEFEFE",
     elevation: 3,
   },
   name: {
     fontSize: 18,
-    marginLeft: 20,
-    marginRight: 20,
+    marginLeft: 100,
     paddingRight: 10,
   },
-  reviewtxt: { fontSize: 18, marginLeft: 30, marginRight: 20 },
+  reviewtxt: { fontSize: 18, marginLeft: 105, marginRight: 20 },
 });

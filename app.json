@@ -6,9 +6,14 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "testing app by tejas",
+    "description": "testing app by tejas:\nadded User page contents\nadded splash screen ",
     "ios": {
       "bundleIdentifier": "com.tejasdev26.digichotureac"
+    },
+    "splash": {
+      "image": "./Images/logo/digichotu.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff"
     }
   },
   "name": "Digichotu"

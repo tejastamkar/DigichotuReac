@@ -7,16 +7,20 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
 const { width, height } = Dimensions.get("window");
 
 const CarouselItem = ({ item }) => {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity style={styles.cardView}>
+    <TouchableOpacity
+      style={styles.cardView}
+      onPress={() => navigation.navigate("Review", { item })}
+    >
       <Image style={styles.image} source={{ uri: item.url }} />
 
       <View style={styles.textView}>
-        <Text style={styles.itemTitle}> {item.title}</Text>
+        <Text style={styles.itemTitle}> {item.name}</Text>
         <Text style={styles.itemDescription}>{item.description}</Text>
       </View>
     </TouchableOpacity>
