@@ -6,7 +6,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "testing app by tejas:\nadded User page contents\nadded splash screen ",
+    "description": "testing app by tejas:\nadded User page contents\nadded splash screen \nadded icon in expo app ",
     "ios": {
       "bundleIdentifier": "com.tejasdev26.digichotureac"
     },
