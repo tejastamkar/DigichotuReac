@@ -16,11 +16,13 @@ const { width, heigth } = Dimensions.get("window");
 const numcol = 2;
 const Reels = ({ data }) => {
   const url = data.url;
+  // console.log(url);
   return (
     <View styles={{ flex: 1 }}>
       <TouchableOpacity style={styles.card}>
         <Video
           source={require("../../Video/video3.mp4")}
+          // source={{ uri: url }}
           rate={1.0}
           volume={1.0}
           isMuted={true}

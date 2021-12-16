@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "khaugalli",
-    "slug": "com.khaugalli",
+    "slug": "khaugalli",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
