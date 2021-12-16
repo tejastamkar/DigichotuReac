@@ -7,7 +7,7 @@ export const carouselData = [
     address:
       "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
     rate: 3,
-    cost: "$$",
+    cost: "₹₹",
     type: "Restro & Bar",
     food: "V/N",
   },
@@ -20,7 +20,7 @@ export const carouselData = [
     address:
       "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
     rate: 5,
-    cost: "$$$",
+    cost: "₹₹₹",
     type: "Restro & Bar",
     food: "V/N",
   },
@@ -32,7 +32,7 @@ export const carouselData = [
     address:
       "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
     rate: 4,
-    cost: "$$$",
+    cost: "₹₹₹",
     type: "Restro & Bar",
     food: "V/N",
   },
@@ -46,7 +46,7 @@ export const cardData = [
     address:
       "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
     rate: 3,
-    cost: "$$",
+    cost: "₹₹",
     type: "Restro & Bar",
     food: "V/N",
   },
@@ -57,7 +57,7 @@ export const cardData = [
     address:
       "Solus, 7 to, 12, Hiranandani Estate, Thane West, Mumbai, Maharashtra 400607",
     rate: 5,
-    cost: "$$$",
+    cost: "₹₹₹",
     type: "Restro & Bar",
     food: "V/N",
   },
@@ -68,7 +68,7 @@ export const cardData = [
     address:
       "S9/The Walk, Hiranandani Estate Rd, Patlipada, Thane West, Thane, Maharashtra 400607",
     rate: 4,
-    cost: "$$$",
+    cost: "₹₹₹",
     type: "Cafe",
     food: "V",
   },
@@ -78,7 +78,7 @@ export const cardData = [
     url: "https://b.zmtcdn.com/data/reviews_photos/640/d2dd134ee4c97956578adbeb39d1a640_1545656693.jpg",
     address: "Hiranandani Estate, Thane West,Thane, Maharashtra 400607",
     rate: 3,
-    cost: "$$",
+    cost: "₹₹",
     type: "Restro & Bar",
     food: "V/N",
   },
@@ -89,7 +89,7 @@ export const cardData = [
     address:
       "Arcadia Cir, Hiranandani Estate,Thane West, Thane, Maharashtra 400607",
     rate: 2,
-    cost: "$$$",
+    cost: "₹₹₹",
     type: "Restro & Bar",
     food: "V/N",
   },
@@ -100,7 +100,7 @@ export const cardData = [
     address:
       "1st floor, The Unique, Hiranandani Estate Rd,Thane West, Maharashtra 400607",
     rate: 4,
-    cost: "$$$",
+    cost: "₹₹₹",
     type: "Restro & Bar",
     food: "V/N",
   },
@@ -111,7 +111,7 @@ export const cardData = [
     address:
       "Shop no 12/13,the walk, Ghodbunder Rd,Hiranandani Estate, Thane,Maharashtra 400607",
     rate: 3,
-    cost: "$$",
+    cost: "₹₹",
     type: "Family Restro",
     food: "V/N",
   },
@@ -122,7 +122,7 @@ export const cardData = [
     address:
       "Om manusmriti CHS Ltd, Kavesar,Ghodbunder Rd, Dongripada, Thane West,Thane, Maharashtra 400607",
     rate: 3,
-    cost: "$$",
+    cost: "₹₹",
     type: "Restro & Bar",
     food: "V/N",
   },

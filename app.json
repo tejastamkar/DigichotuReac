@@ -1,21 +1,21 @@
 {
   "expo": {
-    "name": "DigichotuReac",
-    "slug": "digichotureac",
+    "name": "khaugalli",
+    "slug": "khaugallireac",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "testing app by tejas:\nadded User page contents\nadded splash screen \nadded icon in expo app ",
+    "description": "testing app by tejas:\nchange in Review Page",
     "ios": {
       "bundleIdentifier": "com.tejasdev26.digichotureac"
     },
     "splash": {
-      "image": "./Images/logo/splash.png",
+      "image": "./Images/logo/splash.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#fff"
     },
-    "icon": "./Images/logo/digichotu.png"
+    "icon": "./Images/logo/Logo.png"
   },
-  "name": "Digichotu"
+  "name": "khauGalli "
 }

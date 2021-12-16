@@ -131,13 +131,15 @@ const styles = StyleSheet.create({
   },
   optimg: {
     position: "absolute",
-    marginVertical: 20,
+    marginVertical: 23,
+    width: 30,
+    height: 30,
     marginLeft: 25,
   },
   opt: {
-    marginVertical: 25,
+    top: 27,
     marginLeft: 80,
-    fontSize: 25,
+    fontSize: 20,
     fontWeight: "bold",
   },
 });
