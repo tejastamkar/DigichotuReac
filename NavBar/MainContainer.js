@@ -11,7 +11,7 @@ import NotiflyScreen from "./Screen/NotiflyScreen";
 import { ReviewScreen } from "../Screens/Review/ReviewScreen";
 
 //Screens Names
-const Home = "Digi Chotu";
+const Home = "Home";
 const Profile = "Profile";
 const Reel = "Shots";
 const Notifly = "Notifly";
@@ -23,8 +23,8 @@ function Home_Review() {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen
-        options={{ headerTitleAlign: "center", title: "Digi Chotu" }}
-        name="Home"
+        options={{ headerTitleAlign: "center", title: "khau Galli" }}
+        name="home"
         component={HomeScreen}
       />
       <Stack.Screen name="Review" component={ReviewScreen} />

@@ -15,13 +15,12 @@ import { reels } from "../../Data/reels";
 const { width, heigth } = Dimensions.get("window");
 const numcol = 2;
 const Reels = ({ data }) => {
-  console.log(data.url);
   const url = data.url;
   return (
     <View styles={{ flex: 1 }}>
       <TouchableOpacity style={styles.card}>
         <Video
-          source={require("../../Video/video2.mp4")}
+          source={require("../../Video/video3.mp4")}
           rate={1.0}
           volume={1.0}
           isMuted={true}
