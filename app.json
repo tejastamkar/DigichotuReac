@@ -6,7 +6,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "testing app by tejas:\nchange in Review Page",
+    "description": "testing app by tejas:\nadded shots and full view shots ",
     "ios": {
       "bundleIdentifier": "com.tejasdev26.digichotureac"
     },

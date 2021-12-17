@@ -9,7 +9,8 @@ import ProfileScreen from "./Screen/ProfileScreen";
 import ReelScreen from "./Screen/ReelScreen";
 import NotiflyScreen from "./Screen/NotiflyScreen";
 import { ReviewScreen } from "../Screens/Review/ReviewScreen";
-
+import { ShotsScreen } from "../Screens/ShotWin";
+import { TabBar } from "react-native-tab-view";
 //Screens Names
 const Home = "Home";
 const Profile = "Profile";
@@ -28,6 +29,18 @@ function Home_Review() {
         component={HomeScreen}
       />
       <Stack.Screen name="Review" component={ReviewScreen} />
+    </Stack.Navigator>
+  );
+}
+function Reel_Shots() {
+  return (
+    <Stack.Navigator initialRouteName="reel">
+      <Stack.Screen
+        options={{ headerTitleAlign: "center", title: "Shots" }}
+        name="reel"
+        component={ReelScreen}
+      />
+      <Stack.Screen name="shot" component={ShotsScreen} />
     </Stack.Navigator>
   );
 }
@@ -63,7 +76,11 @@ function MainContainer() {
           name={Home}
           component={Home_Review}
         />
-        <Tab.Screen name={Reel} component={ReelScreen} />
+        <Tab.Screen
+          name={Reel}
+          options={{ headerShown: false }}
+          component={Reel_Shots}
+        />
         <Tab.Screen
           name={Notifly}
           component={NotiflyScreen}

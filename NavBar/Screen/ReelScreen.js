@@ -15,21 +15,21 @@ import { reels } from "../../Data/reels";
 const { width, heigth } = Dimensions.get("window");
 const numcol = 2;
 const Reels = ({ data }) => {
-  const url = data.url;
-  // console.log(url);
+  const navigation = useNavigation();
   return (
     <View styles={{ flex: 1 }}>
-      <TouchableOpacity style={styles.card}>
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => navigation.navigate("shot", { data })}
+      >
         <Video
-          source={require("../../Video/video3.mp4")}
-          // source={{ uri: url }}
+          source={data.url}
           rate={1.0}
           volume={1.0}
           isMuted={true}
           resizeMode="cover"
           shouldPlay
           isLooping
-          // style={{ width: 190, height: 300, backgroundColor: "#000" }}
           style={styles.cardImage}
         />
         <View style={styles.textView}>

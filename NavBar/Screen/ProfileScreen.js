@@ -46,8 +46,8 @@ export default function ProfileScreen({ navgiation }) {
       <TouchableOpacity
         style={{
           marginTop: 15,
-          width: 375,
-          height: 80,
+          width: 355,
+          height: 60,
           borderRadius: 25,
           alignSelf: "center",
           backgroundColor: "#ded6e8",
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     backgroundColor: "#ded6e8",
     elevation: 24,
-    marginBottom: 25,
+    marginBottom: 180,
   },
   Username: {
     marginTop: 5,
@@ -122,8 +122,8 @@ const styles = StyleSheet.create({
   },
   card: {
     marginTop: 15,
-    width: 375,
-    height: 80,
+    width: 355,
+    height: 60,
     borderRadius: 25,
     alignSelf: "center",
     backgroundColor: "#fafafa",
@@ -131,14 +131,14 @@ const styles = StyleSheet.create({
   },
   optimg: {
     position: "absolute",
-    marginVertical: 23,
-    width: 30,
-    height: 30,
+    marginVertical: 20,
+    width: 22,
+    height: 21,
     marginLeft: 25,
   },
   opt: {
-    top: 27,
-    marginLeft: 80,
+    top: 20,
+    marginLeft: 70,
     fontSize: 20,
     fontWeight: "bold",
   },
