@@ -14,24 +14,6 @@ const { width, height } = Dimensions.get("window");
 export function ShotsScreen({ route }) {
   const { data } = route.params;
   return (
-    // <FlatList
-    //   style={{ backgroundColor: "#fff" }}
-    //   ListHeaderComponent={
-    //     <View>
-    //       <Video
-    //         source={data.url}
-    //         rate={1.0}
-    //         volume={1.0}
-    //         isMuted={true}
-    //         resizeMode="cover"
-    //         shouldPlay
-    //         isLooping
-    //         style={styles.Video}
-    //       />
-    //     </View>
-    //   }
-    //   //   ListFooterComponent={<Text>This is Shot </Text>}
-    // />
     <View>
       <Video
         source={data.url}
@@ -43,6 +25,12 @@ export function ShotsScreen({ route }) {
         isLooping
         style={styles.Video}
       />
+      <View style={styles.textView}>
+        <View style={{ flew: 1, flexDirection: "row" }}>
+          <Image source={require("../Images/Icons/videoicon.png")} />
+          <Text style={styles.itemTitle}>{data.name}</Text>
+        </View>
+      </View>
     </View>
   );
 }
@@ -50,7 +38,22 @@ export function ShotsScreen({ route }) {
 const styles = StyleSheet.create({
   Video: {
     width: width - 5,
-    height: height - 70,
+    height: "100%",
     alignSelf: "center",
+  },
+  textView: {
+    position: "absolute",
+    bottom: 1,
+    padding: 10,
+    width: width - 5,
+    height: 50,
+    alignSelf: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
+  },
+  itemTitle: {
+    color: "white",
+    fontSize: 18,
+    marginLeft: 15,
+    fontWeight: "bold",
   },
 });

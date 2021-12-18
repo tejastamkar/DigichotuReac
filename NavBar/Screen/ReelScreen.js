@@ -7,6 +7,7 @@ import {
   StyleSheet,
   FlatList,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Video } from "expo-av";
@@ -33,7 +34,10 @@ const Reels = ({ data }) => {
           style={styles.cardImage}
         />
         <View style={styles.textView}>
-          <Text style={styles.itemTitle}>{data.name}</Text>
+          <View style={{ flew: 1, flexDirection: "row" }}>
+            <Image source={require("../../Images/Icons/videoicon.png")} />
+            <Text style={styles.itemTitle}>{data.name}</Text>
+          </View>
         </View>
       </TouchableOpacity>
     </View>
@@ -97,18 +101,13 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 17,
     padding: 10,
     width: 190,
-    height: 70,
-    backgroundColor: "rgba(0, 0, 0, 0.45)",
+    height: 35,
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
   },
   itemTitle: {
     color: "white",
-    fontSize: 22,
-    shadowColor: "#000",
-    shadowOffset: { width: 0.8, height: 0.8 },
-    shadowOpacity: 1,
-    shadowRadius: 3,
-    marginBottom: 5,
+    fontSize: 18,
+    marginLeft: 15,
     fontWeight: "bold",
-    elevation: 5,
   },
 });

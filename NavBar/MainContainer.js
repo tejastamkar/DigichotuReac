@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -10,7 +10,9 @@ import ReelScreen from "./Screen/ReelScreen";
 import NotiflyScreen from "./Screen/NotiflyScreen";
 import { ReviewScreen } from "../Screens/Review/ReviewScreen";
 import { ShotsScreen } from "../Screens/ShotWin";
+import { CameraScreen } from "../NavBar/Screen/Camerapage";
 import { TabBar } from "react-native-tab-view";
+import { Homeheader, CameraBtn } from "../Components/header";
 //Screens Names
 const Home = "Home";
 const Profile = "Profile";
@@ -20,74 +22,101 @@ const Notifly = "Notifly";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-function Home_Review() {
+function NavBar() {
   return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen
-        options={{ headerTitleAlign: "center", title: "khau Galli" }}
-        name="home"
+    <Tab.Navigator initialRouteName={Home} screenOptions={screenSetting}>
+      <Tab.Screen
+        name={Home}
         component={HomeScreen}
+        options={{
+          headerTitle: () => <Homeheader />,
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#fff",
+            elevation: 0,
+          },
+          headerLeft: () => <CameraBtn />,
+          tabBarActiveTintColor: "#933FB6",
+          tabBarInactiveTintColor: "gray",
+        }}
       />
-      <Stack.Screen name="Review" component={ReviewScreen} />
-    </Stack.Navigator>
-  );
-}
-function Reel_Shots() {
-  return (
-    <Stack.Navigator initialRouteName="reel">
-      <Stack.Screen
+      <Tab.Screen
         options={{ headerTitleAlign: "center", title: "Shots" }}
-        name="reel"
+        name={Reel}
         component={ReelScreen}
+        options={{
+          tabBarActiveTintColor: "#933FB6",
+          tabBarInactiveTintColor: "gray",
+        }}
       />
-      <Stack.Screen name="shot" component={ShotsScreen} />
-    </Stack.Navigator>
+      <Tab.Screen
+        name={Notifly}
+        component={NotiflyScreen}
+        options={{
+          tabBarActiveTintColor: "#933FB6",
+          tabBarInactiveTintColor: "gray",
+          tabBarBadge: 1,
+          tabBarBadgeStyle: { backgroundColor: "#933FB6" },
+        }}
+      />
+      <Tab.Screen
+        name={Profile}
+        component={ProfileScreen}
+        options={{
+          tabBarActiveTintColor: "#933FB6",
+          tabBarInactiveTintColor: "gray",
+        }}
+      />
+    </Tab.Navigator>
   );
 }
+
+const screenSetting = ({ route }) => ({
+  headerTitleAlign: "center",
+  tabBarIcon: ({ focused, color, size }) => {
+    let iconName;
+    let rn = route.name;
+
+    if (rn === Home) {
+      iconName = focused ? "home" : "home-outline";
+    } else if (rn === Profile) {
+      iconName = focused ? "person" : "person-outline";
+    } else if (rn === Reel) {
+      iconName = "caret-forward-circle-outline";
+    } else if (rn === Notifly) {
+      iconName = focused ? "notifications" : "notifications-outline";
+    }
+    return <Ionicons name={iconName} size={size} color={color} />;
+  },
+});
 
 function MainContainer() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName={Home}
-        screenOptions={({ route }) => ({
-          headerTitleAlign: "center",
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
-            let rn = route.name;
-
-            if (rn === Home) {
-              iconName = focused ? "home" : "home-outline";
-            } else if (rn === Profile) {
-              iconName = focused ? "person" : "person-outline";
-            } else if (rn === Reel) {
-              iconName = "caret-forward-circle-outline";
-            } else if (rn === Notifly) {
-              iconName = focused ? "notifications" : "notifications-outline";
-            }
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-          tabBarActiveTintColor: "#933FB6",
-          tabBarInactiveTintColor: "gray",
-        })}
-      >
-        <Tab.Screen
+      <Stack.Navigator initialRouteName="home">
+        <Stack.Screen
           options={{ headerShown: false }}
-          name={Home}
-          component={Home_Review}
+          name="home"
+          component={NavBar}
         />
-        <Tab.Screen
-          name={Reel}
-          options={{ headerShown: false }}
-          component={Reel_Shots}
+        <Stack.Screen name="Review" component={ReviewScreen} />
+        <Stack.Screen
+          name="Camera"
+          component={CameraScreen}
+          options={{
+            headerStatusBarHeight: 20,
+          }}
         />
-        <Tab.Screen
-          name={Notifly}
-          component={NotiflyScreen}
-          options={{ tabBarBadge: 1 }}
+        <Stack.Screen
+          name="shot"
+          options={{
+            headerTransparent: true,
+            headerTintColor: "#fff",
+            headerStatusBarHeight: 10,
+          }}
+          component={ShotsScreen}
         />
-        <Tab.Screen name={Profile} component={ProfileScreen} />
-      </Tab.Navigator>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

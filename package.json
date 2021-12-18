@@ -34,7 +34,8 @@
     "react-native-video": "^5.2.0",
     "react-native-web": "0.17.1",
     "react-navigation": "^4.4.4",
-    "expo-av": "~9.1.2"
+    "expo-av": "~9.1.2",
+    "expo-camera": "~11.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

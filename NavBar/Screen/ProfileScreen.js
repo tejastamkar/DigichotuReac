@@ -24,7 +24,7 @@ export default function ProfileScreen({ navgiation }) {
         </View>
       </View>
       <View style={styles.UserInfo}>
-        <Text style={styles.Username}>TestUser</Text>
+        <Text style={styles.Username}>Ashutosh Nayak</Text>
         <Text style={styles.mail}>test.user@abc.com</Text>
         <Text style={styles.phnum}>1234567890</Text>
         {/* <Button>"Go back Home"</Button> */}
@@ -67,14 +67,14 @@ export default function ProfileScreen({ navgiation }) {
 
 const styles = StyleSheet.create({
   image: {
-    width: 115,
+    width: 110,
     height: height / 7.8,
     margin: 11,
     alignSelf: "center",
     borderRadius: 100,
   },
   c1: {
-    width: 155,
+    width: 150,
     height: height / 5.6,
     backgroundColor: "#ded6e8",
     alignSelf: "center",
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     elevation: 25,
   },
   c2: {
-    width: 130,
+    width: 125,
     height: height / 6.5,
     backgroundColor: "#8464aa",
     alignSelf: "center",
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     backgroundColor: "#ded6e8",
     elevation: 24,
-    marginBottom: 180,
+    marginBottom: 20,
   },
   Username: {
     marginTop: 5,

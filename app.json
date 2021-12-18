@@ -8,7 +8,7 @@
     ],
     "description": "testing app by tejas:\nadded shots and full view shots ",
     "ios": {
-      "bundleIdentifier": "com.tejasdev26.digichotureac"
+      "bundleIdentifier": "com.tejasdev26.khaugalli"
     },
     "splash": {
       "image": "./Images/logo/splash.jpg",
