@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "237350316327",
+    "project_id": "test-5320e",
+    "storage_bucket": "test-5320e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237350316327:android:fe6cfee2f2fe856d24e102",
+        "android_client_info": {
+          "package_name": "com.tejasdev26.khaugalli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237350316327-1tljm9nujqb5np0se7djr9dlpfu3ktn6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_HeJzwfWAz2ZK7ZtS2dU9I5f0cKueEjE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237350316327-1tljm9nujqb5np0se7djr9dlpfu3ktn6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

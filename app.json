@@ -8,8 +8,7 @@
     ],
     "description": "testing app by tejas:\nadded Camera",
     "ios": {
-      "bundleIdentifier": "com.tejasdev26.khaugalli",
-      "googleServicesFile": "./GoogleService-Info.plist"
+      "bundleIdentifier": "com.tejasdev26.khaugalli"
     },
     "splash": {
       "image": "./Images/logo/splash.jpg",
@@ -18,13 +17,9 @@
     },
     "icon": "./Images/logo/Logo.png",
     "android": {
+      "package": "com.tejasdev26.khaugalli",
       "googleServicesFile": "./google-services.json"
-    },
-    "plugins": [
-      "@react-native-firebase/app",
-      "@react-native-firebase/perf",
-      "@react-native-firebase/crashlytics"
-    ]
+    }
   },
   "name": "khauGalli "
 }

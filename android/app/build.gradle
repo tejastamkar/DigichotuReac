@@ -85,7 +85,8 @@ project.ext.react = [
 ]
 
 apply from: new File(["node", "--print", "require.resolve('react-native/package.json')"].execute(null, rootDir).text.trim(), "../react.gradle")
-
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 /**
  * Set this to true to create two separate APKs instead of one:
  *   - An APK that only works on ARM devices
@@ -186,6 +187,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
+    implementation platform('com.google.firebase:firebase-bom:29.0.2')
+    implementation 'com.google.firebase:firebase-analytics'
     implementation "com.facebook.react:react-native:+"  // From node_modules
     compile project(':react-native-video')
     implementation "androidx.appcompat:appcompat:1.0.0"

@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
-    "@react-native-firebase/app": "^14.1.0",
     "@react-navigation/bottom-tabs": "^6.0.9",
     "@react-navigation/material-top-tabs": "^6.0.6",
     "@react-navigation/native": "^6.0.6",
@@ -23,9 +22,10 @@
     "expo-splash-screen": "~0.10.2",
     "expo-status-bar": "~1.0.4",
     "expo-updates": "~0.5.4",
-    "react": "17.0.1",
+    "firebase": "^8.2.3",
+    "react": "16.13.1",
     "react-dom": "17.0.1",
-    "react-native": "^0.63.4",
+    "react-native": "~0.63.4",
     "react-native-bootsplash": "^3.2.6",
     "react-native-gesture-handler": "~1.10.2",
     "react-native-ico-material-design": "^3.3.1",
@@ -34,6 +34,7 @@
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.0.0",
     "react-native-tab-view": "^3.1.1",
+    "react-native-unimodules": "~0.13.3",
     "react-native-vector-icons": "^9.0.0",
     "react-native-video": "^5.2.0",
     "react-native-web": "0.17.1",
@@ -42,5 +43,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.9"
   },
-  "private": true
+  "private": true,
+  "name": "khaugali",
+  "version": "1.0.0"
 }
