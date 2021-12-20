@@ -6,16 +6,25 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "testing app by tejas:\nadded shots and full view shots ",
+    "description": "testing app by tejas:\nadded Camera",
     "ios": {
-      "bundleIdentifier": "com.tejasdev26.khaugalli"
+      "bundleIdentifier": "com.tejasdev26.khaugalli",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "splash": {
       "image": "./Images/logo/splash.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#fff"
     },
-    "icon": "./Images/logo/Logo.png"
+    "icon": "./Images/logo/Logo.png",
+    "android": {
+      "googleServicesFile": "./google-services.json"
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/perf",
+      "@react-native-firebase/crashlytics"
+    ]
   },
   "name": "khauGalli "
 }
