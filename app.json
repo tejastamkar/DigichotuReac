@@ -18,7 +18,8 @@
     },
     "icon": "./Images/logo/Logo.png",
     "android": {
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "package": "com.tejasdev26.khaugalli"
     },
     "plugins": [
       "@react-native-firebase/app",
