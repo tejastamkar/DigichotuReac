@@ -17,20 +17,11 @@ const firebaseConfig = {
 };
 
 // // Initialize Firebase
-const app = Firebase.initializeApp(firebaseConfig);
+Firebase.initializeApp(firebaseConfig);
 export const db = Firebase.firestore();
 export const auth = Firebase.auth();
 
-var data = [];
-export function getCard() {
-  // console.log("in the function");
-  // var snapshot = await firebase.firestore().collection("Hotel").get();
-
-  // snapshot.forEach((doc) => {
-  //   data.push(doc.data());
-  // });
-  // // console.log(data);
-  // return data;
+export function getCard(data) {
   db.collection("Hotel")
     .get()
     .then((querySnapshot) => {
@@ -39,6 +30,6 @@ export function getCard() {
         //TODO ADD user name in doc.name every time user is created.
       });
     });
-  // console.log(data);
+  console.log(data);
   return data;
 }

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image } from "react-native";
 export default function HotelReview({ item }) {
   return (
     <View>
-      <Text style={styles.header}>{item.name}</Text>
+      <Text style={styles.header}>{item.Name}</Text>
       <Text style={styles.textType}>{item.type}</Text>
       <Text style={styles.textAddres}>{item.address}</Text>
       <View

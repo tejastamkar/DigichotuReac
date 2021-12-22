@@ -6,7 +6,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "testing app by tejas:\nadded Camera",
+    "description": "testing app by tejas:\npackages updated ",
     "ios": {
       "bundleIdentifier": "com.tejasdev26.khaugalli"
     },

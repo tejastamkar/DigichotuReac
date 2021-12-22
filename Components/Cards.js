@@ -28,7 +28,7 @@ const CardItems = ({ item }) => {
       />
       <View style={styles.textView}>
         {/* <Image source={{ uri: require("../Images/Icons/bgblur.png") }} />r */}
-        <Text style={styles.itemTitle}>{item.name}</Text>
+        <Text style={styles.itemTitle}>{item.Name}</Text>
         <Text style={styles.itemRate}>Rating: {item.rate}/5</Text>
         <Text style={styles.itemDescription}>{item.address}</Text>
         {/* <Button title="Press me" onPress={pressHandler} /> */}
@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 1,
     marginTop: 14,
+    width: "100%",
     borderBottomLeftRadius: 17,
     borderBottomRightRadius: 17,
     padding: 10,
