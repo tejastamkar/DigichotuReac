@@ -47,7 +47,7 @@ function infiniteScroll(dataList) {
     }
 
     this.flatList.scrollToOffset({ animated: true, offset: scrollValue });
-  }, 10000);
+  }, 1000);
 }
 
 const Carousel = ({ data }) => {
@@ -56,11 +56,13 @@ const Carousel = ({ data }) => {
   const [dataList, setDataList] = useState(data);
 
   useEffect(() => {
-    setDataList(data);
-    infiniteScroll(dataList);
+    if (dataList) {
+      setDataList(data);
+      infiniteScroll(dataList);
+    }
   });
 
-  if (data && data.length) {
+  if (data) {
     return (
       <SafeAreaView>
         <FlatList

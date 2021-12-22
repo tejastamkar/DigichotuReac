@@ -10,6 +10,7 @@ export default class HomeScreen extends React.Component {
     super();
     this.state = {
       data: null,
+      CarouselData: null,
     };
   }
   componentDidMount() {
@@ -22,16 +23,25 @@ export default class HomeScreen extends React.Component {
         });
         this.setState({ data: temp });
       });
+    db.collection("Carousel")
+      .get()
+      .then((snapshot) => {
+        const temp = [];
+        snapshot.forEach((doc) => {
+          temp.push(doc.data());
+        });
+        this.setState({ CarouselData: temp });
+      });
     // this.setState({ data: getCard(this.state.data) });
   }
   render() {
-    // console.log(this.state.data);
+    // console.log(carouselData);
     return (
       <FlatList
         style={{ backgroundColor: "#fff" }}
         ListHeaderComponent={
           <>
-            <Carousel data={carouselData} />
+            <Carousel data={this.state.CarouselData} />
           </>
         }
         ListFooterComponent={

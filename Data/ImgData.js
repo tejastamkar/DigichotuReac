@@ -18,7 +18,7 @@ export const carouselData = [
     description:
       "Best Place for Spend evening time With love , Family and Friends",
     address:
-      "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
+      "De Grandeur Hotel And Banquets, Royal Plaza, De Grandeur Hotel and Banquets Rooftop, Ghodbunder Rd, Anand Nagar, Thane West, Thane, Maharashtra 400615",
     rate: 5,
     cost: "₹₹₹",
     type: "Restro & Bar",
@@ -30,7 +30,7 @@ export const carouselData = [
     url: "https://b.zmtcdn.com/data/pictures/8/18523548/be0c272a0f44396b71a9a8c55ffb75fc.jpg",
     description: "Top 5 Hotel of Thane",
     address:
-      "Shop no 12/13,the walk, Ghodbunder Rd, Hiranandani Estate, Thane,Maharashtra 400607",
+      "Sun Magnetica, Green Rd, near LIC building, Louis Wadi, Thane West, Thane, Maharashtra 400604",
     rate: 4,
     cost: "₹₹₹",
     type: "Restro & Bar",
