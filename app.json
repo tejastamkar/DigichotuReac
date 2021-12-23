@@ -6,16 +6,16 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "testing app by tejas:\npackages updated ",
+    "description": "testing app by tejas:\nupdated the images  ",
     "ios": {
       "bundleIdentifier": "com.tejasdev26.khaugalli"
     },
     "splash": {
-      "image": "./Images/logo/splash.jpg",
+      "image": "./Images/logo/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#fff"
     },
-    "icon": "./Images/logo/Logo.png",
+    "icon": "./Images/logo/Logo.jpg",
     "android": {
       "package": "com.tejasdev26.khaugalli",
       "googleServicesFile": "./google-services.json"

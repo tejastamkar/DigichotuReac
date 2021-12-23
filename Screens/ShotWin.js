@@ -19,7 +19,7 @@ export function ShotsScreen({ route }) {
         source={data.url}
         rate={1.0}
         volume={1.0}
-        isMuted={true}
+        isMuted={false}
         resizeMode="cover"
         shouldPlay
         isLooping
