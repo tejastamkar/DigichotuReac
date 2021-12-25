@@ -6,7 +6,6 @@ import {
   Dimensions,
   FlatList,
   Text,
-  Button,
   TouchableOpacity,
 } from "react-native";
 import HotelReview from "./HotelReview";
@@ -21,38 +20,9 @@ export function ReviewScreen({ route }) {
   const { item } = route.params;
   bs = React.createRef();
   fall = new Animated.Value(1);
+  const [text, onChangeText] = React.useState(null);
   return (
     <>
-      <FlatList
-        style={{ backgroundColor: "#fff" }}
-        ListHeaderComponent={
-          <>
-            <View style={styles.cardView}>
-              <Image style={styles.image} source={{ uri: item.url }} />
-            </View>
-          </>
-        }
-        ListFooterComponent={
-          <>
-            <HotelReview item={item} />
-            <View
-              style={{
-                flex: 1,
-                height: 1,
-                backgroundColor: "black",
-                marginBottom: 20,
-                marginTop: 20,
-              }}
-            />
-            <Button
-              style={{ marginTop: 300 }}
-              title="Review"
-              onPress={() => bs.current.snapTo(1)}
-            />
-            <UserReview data={Users} />
-          </>
-        }
-      />
       <BottomSheet
         ref={bs}
         snapPoints={[0, 350, 800]}
@@ -62,6 +32,56 @@ export function ReviewScreen({ route }) {
         callbackNode={fall}
         enabledGestureInteraction={true}
       />
+      <Animated.View
+        style={{
+          opacity: Animated.add(0.1, Animated.multiply(fall, 1.0)),
+          backgroundColor: "black",
+        }}
+      >
+        <FlatList
+          style={{ backgroundColor: "#fff" }}
+          ListHeaderComponent={
+            <>
+              <View style={styles.cardView}>
+                <Image style={styles.image} source={{ uri: item.url }} />
+              </View>
+            </>
+          }
+          ListFooterComponent={
+            <>
+              <HotelReview item={item} />
+              <View
+                style={{
+                  flex: 1,
+                  height: 1,
+                  backgroundColor: "black",
+                  marginBottom: 20,
+                  marginTop: 20,
+                }}
+              />
+              <View style={styles.RowView}>
+                <Text style={styles.header}>UserReview</Text>
+                <TouchableOpacity
+                  onPress={() => bs.current.snapTo(1)}
+                  style={styles.ReviewBtn}
+                >
+                  <Text
+                    style={{
+                      color: "#fff",
+                      alignSelf: "center",
+                      top: 7,
+                    }}
+                  >
+                    Review
+                  </Text>
+                </TouchableOpacity>
+              </View>
+
+              <UserReview data={Users} />
+            </>
+          }
+        />
+      </Animated.View>
     </>
   );
 }
@@ -89,5 +109,21 @@ const styles = StyleSheet.create({
     width: width - 20,
     height: height / 4,
     borderRadius: 10,
+  },
+  header: {
+    fontSize: 26,
+    color: "#933FB6",
+    marginLeft: 20,
+  },
+  RowView: {
+    flex: 1,
+    flexDirection: "row",
+  },
+  ReviewBtn: {
+    width: 70,
+    height: 30,
+    borderRadius: 5,
+    backgroundColor: "#933FB6",
+    marginLeft: width - 230,
   },
 });

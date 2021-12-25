@@ -6,7 +6,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "testing app by tejas:\nupdated the images  ",
+    "description": "testing app by tejas:\nadded bottom pop up screen in review \nupdated all the packages  ",
     "ios": {
       "bundleIdentifier": "com.tejasdev26.khaugalli"
     },

@@ -27,7 +27,6 @@ const UserList = ({ item }) => {
 export const UserReview = ({ data }) => {
   return (
     <>
-      <Text style={styles.header}>UserReview</Text>
       <FlatList
         data={data}
         renderItem={({ item }) => {

@@ -1,21 +1,31 @@
-import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  TextInput,
+} from "react-native";
 
-export const PopCont = () => (
+export const PopCont = (text, onChangeText) => (
   <View style={styles.panel}>
     <View style={{ alignItems: "center" }}>
-      <Text style={styles.panelTitle}>Upload Photo</Text>
-      <Text style={styles.panelSubtitle}>Choose Your Profile Picture</Text>
+      <Text style={styles.panelTitle}>Review</Text>
     </View>
+    <>
+      <TextInput
+        style={styles.input}
+        value={text}
+        onChangeText={onChangeText}
+        placeholder="description  (Max 400 words)"
+      />
+    </>
     <TouchableOpacity style={styles.panelButton}>
-      <Text style={styles.panelButtonTitle}>Take Photo</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.panelButton}>
-      <Text style={styles.panelButtonTitle}>Choose From Library</Text>
+      <Text style={styles.panelButtonTitle}>Submit</Text>
     </TouchableOpacity>
     <TouchableOpacity
       style={styles.panelButton}
-      onPress={() => this.bs.current.snapTo(1)}
+      onPress={() => bs.current.snapTo(0)}
     >
       <Text style={styles.panelButtonTitle}>Cancel</Text>
     </TouchableOpacity>
@@ -42,7 +52,7 @@ const styles = StyleSheet.create({
   panelHandle: {
     width: 40,
     height: 8,
-    borderRadius: 4,
+    borderRadius: 10,
     backgroundColor: "#00000040",
     marginBottom: 10,
   },
@@ -78,5 +88,11 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: "bold",
     color: "white",
+  },
+  input: {
+    height: 100,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
   },
 });
