@@ -34,20 +34,22 @@ const CarouselItem = ({ item }) => {
 };
 
 function infiniteScroll(dataList) {
-  const numberOfData = dataList.length;
-  let scrollValue = 0,
-    scrolled = 0;
-
-  setInterval(function () {
-    scrolled++;
-    if (scrolled < numberOfData) scrollValue = scrollValue + width;
-    else {
-      scrollValue = 0;
+  if (dataList) {
+    const numberOfData = dataList.length;
+    let scrollValue = 0,
       scrolled = 0;
-    }
 
-    this.flatList.scrollToOffset({ animated: true, offset: scrollValue });
-  }, 1000);
+    setInterval(function () {
+      scrolled++;
+      if (scrolled < numberOfData) scrollValue = scrollValue + width;
+      else {
+        scrollValue = 0;
+        scrolled = 0;
+      }
+
+      this.flatList.scrollToOffset({ animated: true, offset: scrollValue });
+    }, 10000);
+  }
 }
 
 const Carousel = ({ data }) => {
@@ -56,10 +58,8 @@ const Carousel = ({ data }) => {
   const [dataList, setDataList] = useState(data);
 
   useEffect(() => {
-    if (dataList) {
-      setDataList(data);
-      infiniteScroll(dataList);
-    }
+    setDataList(data);
+    infiniteScroll(dataList);
   });
 
   if (data) {

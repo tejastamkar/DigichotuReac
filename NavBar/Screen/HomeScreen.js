@@ -14,15 +14,6 @@ export default class HomeScreen extends React.Component {
     };
   }
   componentDidMount() {
-    db.collection("Hotel")
-      .get()
-      .then((snapshot) => {
-        const temp = [];
-        snapshot.forEach((doc) => {
-          temp.push(doc.data());
-        });
-        this.setState({ data: temp });
-      });
     db.collection("Carousel")
       .get()
       .then((snapshot) => {
@@ -33,6 +24,15 @@ export default class HomeScreen extends React.Component {
         this.setState({ CarouselData: temp });
       });
     // this.setState({ data: getCard(this.state.data) });
+    db.collection("Hotel")
+      .get()
+      .then((snapshot) => {
+        const temp = [];
+        snapshot.forEach((doc) => {
+          temp.push(doc.data());
+        });
+        this.setState({ data: temp });
+      });
   }
   render() {
     // console.log(carouselData);

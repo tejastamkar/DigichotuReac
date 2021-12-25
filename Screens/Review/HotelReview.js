@@ -1,5 +1,6 @@
 import * as React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
+const { width, height } = Dimensions.get("window");
 export default function HotelReview({ item }) {
   return (
     <View>
