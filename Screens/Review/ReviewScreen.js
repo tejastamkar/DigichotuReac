@@ -13,21 +13,22 @@ import { Users } from "../../Data/UserData";
 import { UserReview } from "./UserReview";
 import Animated from "react-native-reanimated";
 import BottomSheet from "reanimated-bottom-sheet";
-import { PopCont, headerPil } from "./AddReviewScreen";
+import { Popcont, headerPil } from "./AddReviewScreen";
 
 const { width, height } = Dimensions.get("window");
 export function ReviewScreen({ route }) {
   const { item } = route.params;
   bs = React.createRef();
   fall = new Animated.Value(1);
-  const [text, onChangeText] = React.useState(null);
+
   return (
     <>
       <BottomSheet
         ref={bs}
         snapPoints={[0, 350, 800]}
         initialSnap={0}
-        renderContent={PopCont}
+        renderContent={Popcont}
+        // ListFooterComponent={Popcont}
         renderHeader={headerPil}
         callbackNode={fall}
         enabledGestureInteraction={true}
@@ -39,7 +40,7 @@ export function ReviewScreen({ route }) {
         }}
       >
         <FlatList
-          style={{ backgroundColor: "#fff" }}
+          style={{ backgroundColor: "#fff", height: "100%" }}
           ListHeaderComponent={
             <>
               <View style={styles.cardView}>
@@ -52,7 +53,7 @@ export function ReviewScreen({ route }) {
               <HotelReview item={item} />
               <View
                 style={{
-                  flex: 1,
+                  width: "100%",
                   height: 1,
                   backgroundColor: "black",
                   marginBottom: 20,

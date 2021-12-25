@@ -6,7 +6,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "testing app by tejas:\nadded bottom pop up screen in review \nupdated all the packages  ",
+    "description": "testing app by tejas:\nadded stars in review screen\nand submit action ",
     "ios": {
       "bundleIdentifier": "com.tejasdev26.khaugalli"
     },
@@ -18,7 +18,8 @@
     "icon": "./Images/logo/Logo.jpg",
     "android": {
       "package": "com.tejasdev26.khaugalli",
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "softwareKeyboardLayoutMode": "pan"
     }
   },
   "name": "khauGalli "

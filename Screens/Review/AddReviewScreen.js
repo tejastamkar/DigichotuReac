@@ -5,32 +5,87 @@ import {
   TouchableOpacity,
   StyleSheet,
   TextInput,
+  Image,
 } from "react-native";
 
-export const PopCont = (text, onChangeText) => (
-  <View style={styles.panel}>
-    <View style={{ alignItems: "center" }}>
-      <Text style={styles.panelTitle}>Review</Text>
+function ReViewCont() {
+  const [text, setText] = useState("");
+  const [rate, setRate] = useState(2);
+  const [maxRate, setMaxRate] = useState([1, 2, 3, 4, 5]);
+  const filled =
+    "https://github.com/tranhonghan/images/blob/main/star_filled.png?raw=true";
+  // require("../../Images/Icons/ratingImgFilled.png");
+  const corner =
+    "https://github.com/tranhonghan/images/blob/main/star_corner.png?raw=true";
+  // require("../../Images/Icons/ratingImgCorner.png");
+
+  const submitaction = () => {
+    alert("Your Review \n" + rate + "\n" + text);
+  };
+
+  const CustomRatingBar = () => {
+    return (
+      <View style={styles.StarView}>
+        {maxRate.map((item, key) => {
+          return (
+            <TouchableOpacity
+              activeOpacity={0.7}
+              key={item}
+              onPress={() => setRate(item)}
+            >
+              <Image
+                style={styles.StarImg}
+                source={item <= rate ? { uri: filled } : { uri: corner }}
+                // source={corner}
+              />
+            </TouchableOpacity>
+          );
+        })}
+      </View>
+    );
+  };
+  return (
+    <View style={styles.panel}>
+      <View style={{ alignItems: "center" }}>
+        <Text style={styles.panelTitle}>Review</Text>
+      </View>
+      <CustomRatingBar />
+      <Text
+        style={{
+          fontSize: 20,
+          alignSelf: "center",
+          marginBottom: 5,
+          marginTop: 5,
+        }}
+      >
+        {rate + "/" + maxRate.length}
+      </Text>
+      <>
+        <TextInput
+          style={styles.input}
+          value={text}
+          multiline={true}
+          maxLength={400}
+          onChangeText={(text) => setText(text)}
+          placeholder="description  (Max 400 words)"
+        />
+      </>
+      <TouchableOpacity
+        style={styles.panelButton}
+        onPress={() => submitaction()}
+      >
+        <Text style={styles.panelButtonTitle}>Submit</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.panelButton}
+        onPress={() => bs.current.snapTo(0)}
+      >
+        <Text style={styles.panelButtonTitle}>Cancel</Text>
+      </TouchableOpacity>
     </View>
-    <>
-      <TextInput
-        style={styles.input}
-        value={text}
-        onChangeText={onChangeText}
-        placeholder="description  (Max 400 words)"
-      />
-    </>
-    <TouchableOpacity style={styles.panelButton}>
-      <Text style={styles.panelButtonTitle}>Submit</Text>
-    </TouchableOpacity>
-    <TouchableOpacity
-      style={styles.panelButton}
-      onPress={() => bs.current.snapTo(0)}
-    >
-      <Text style={styles.panelButtonTitle}>Cancel</Text>
-    </TouchableOpacity>
-  </View>
-);
+  );
+}
+export const Popcont = () => <ReViewCont />;
 export const headerPil = () => (
   <View style={styles.header}>
     <View style={styles.panelHeader}>
@@ -43,7 +98,7 @@ const styles = StyleSheet.create({
   panel: {
     padding: 20,
     backgroundColor: "#fff",
-    height: 765,
+    height: "100%",
     paddingTop: 20,
   },
   panelHeader: {
@@ -93,6 +148,16 @@ const styles = StyleSheet.create({
     height: 100,
     margin: 12,
     borderWidth: 1,
-    padding: 10,
+    paddingLeft: 10,
+  },
+  StarView: {
+    justifyContent: "center",
+    flexDirection: "row",
+    marginTop: 10,
+  },
+  StarImg: {
+    width: 35,
+    height: 35,
+    resizeMode: "cover",
   },
 });
