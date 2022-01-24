@@ -1,5 +1,8 @@
 // // Import the functions you need from the SDKs you need
-import * as Firebase from "firebase";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
+
 // // import { getAnalytics } from "firebase/analytics";
 // // TODO: Add SDKs for Firebase products that you want to use
 // // https://firebase.google.com/docs/web/setup#available-libraries
@@ -17,9 +20,10 @@ const firebaseConfig = {
 };
 
 // // Initialize Firebase
-Firebase.initializeApp(firebaseConfig);
-export const db = Firebase.firestore();
-export const auth = Firebase.auth();
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const auth = getAuth();
+// export const auth = Firebase.auth();
 
 // export function getCard(data) {
 //   db.collection("Hotel")

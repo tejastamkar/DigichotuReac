@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TextInput,
   Image,
+  KeyboardAvoidingView,
 } from "react-native";
 
 function ReViewCont() {
@@ -36,7 +37,7 @@ function ReViewCont() {
               <Image
                 style={styles.StarImg}
                 source={item <= rate ? { uri: filled } : { uri: corner }}
-                // source={corner}
+              // source={corner}
               />
             </TouchableOpacity>
           );
@@ -60,7 +61,7 @@ function ReViewCont() {
       >
         {rate + "/" + maxRate.length}
       </Text>
-      <>
+      <KeyboardAvoidingView>
         <TextInput
           style={styles.input}
           value={text}
@@ -69,7 +70,7 @@ function ReViewCont() {
           onChangeText={(text) => setText(text)}
           placeholder="description  (Max 400 words)"
         />
-      </>
+      </KeyboardAvoidingView>
       <TouchableOpacity
         style={styles.panelButton}
         onPress={() => submitaction()}

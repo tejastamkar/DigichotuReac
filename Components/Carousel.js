@@ -60,7 +60,7 @@ const Carousel = ({ data }) => {
   useEffect(() => {
     setDataList(data);
     infiniteScroll(dataList);
-  });
+  }, []);
 
   if (data) {
     return (

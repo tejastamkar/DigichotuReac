@@ -4,39 +4,36 @@ import Carousel from "../../Components/Carousel";
 import { carouselData } from "../../Data/ImgData";
 import { Card } from "../../Components/Cards";
 import { db } from "../../firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 export default class HomeScreen extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: null,
-      CarouselData: null,
+      data: [],
+      CarouselData: [],
+      loading: false
     };
   }
   componentDidMount() {
     // to fetch data of Hotels in Carousel
-    db.collection("Carousel")
-      .get()
-      .then((snapshot) => {
-        const temp = [];
-        snapshot.forEach((doc) => {
-          temp.push(doc.data());
-        });
-        this.setState({ CarouselData: temp });
+    getDocs(collection(db, "Carousel")).then(async (snapshort) => {
+      snapshort.docs.forEach((doc) => {
+        this.state.CarouselData.push({ ...doc.data() })
+        this.setState({ loading: true })
+        // this.state.CarouselData.push({ ...doc.data(), id: doc.id });
       });
+    });
     // To fetch data of Hotels 
-    db.collection("Hotel")
-      .get()
-      .then((snapshot) => {
-        const temp = [];
-        snapshot.forEach((doc) => {
-          temp.push(doc.data());
-        });
-        this.setState({ data: temp });
+    getDocs(collection(db, "Hotel")).then(async (snapshort) => {
+      snapshort.docs.forEach((doc) => {
+        this.state.data.push({ ...doc.data() });
+        this.setState({ loading: true })
       });
+    });
   }
   render() {
-    return (
+    return this.state.data ? (
       <FlatList
         style={{ backgroundColor: "#fff" }}
         ListHeaderComponent={
@@ -50,6 +47,9 @@ export default class HomeScreen extends React.Component {
           </>
         }
       />
-    );
+    ) : (
+      <>
+      </>
+    )
   }
 }

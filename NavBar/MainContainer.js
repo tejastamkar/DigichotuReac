@@ -13,8 +13,8 @@ import { ShotsScreen } from "../Screens/ShotWin";
 import { CameraScreen } from "../NavBar/Screen/Camerapage";
 import { TabBar } from "react-native-tab-view";
 import { Homeheader, CameraBtn } from "../Components/header";
-import LoginScreen from "./Screen/LoginScreen";
-import SignUpScreen from "./Screen/SignUpScreen";
+import LoginScreen from "../Screens/LoginScreen";
+import SignUpScreen from "../Screens/SignUpScreen";
 //Screens Names
 const Home = "Home";
 const Profile = "Profile";

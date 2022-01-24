@@ -9,10 +9,20 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { auth } from "../../firebase";
+import { signOut } from 'firebase/auth'
 
 const { width, height } = Dimensions.get("window");
 export default function ProfileScreen({ navgiation }) {
   const navigation = useNavigation();
+
+  const Logout = () => {
+    signOut(auth).then(
+      navigation.navigate("login")
+    ).catch((e) => {
+      alert(e.message)
+    })
+  }
   return (
     <View style={{ flex: 1, backgroundColor: "#fff" }}>
       <View style={styles.c1}>
@@ -53,7 +63,7 @@ export default function ProfileScreen({ navgiation }) {
           backgroundColor: "#ded6e8",
           elevation: 15,
         }}
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => Logout()}
       >
         <Image
           style={styles.optimg}
