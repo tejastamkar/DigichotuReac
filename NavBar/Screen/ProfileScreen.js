@@ -34,9 +34,9 @@ export default function ProfileScreen({ navgiation }) {
         </View>
       </View>
       <View style={styles.UserInfo}>
-        <Text style={styles.Username}>Ashutosh Nayak</Text>
-        <Text style={styles.mail}>test.user@abc.com</Text>
-        <Text style={styles.phnum}>1234567890</Text>
+        <Text style={styles.Username}>User: {auth.currentUser?.email}</Text>
+        {/* <Text style={styles.mail}>test.user@abc.com</Text> */}
+        <Text style={styles.phnum}>Phone: 1234567890</Text>
         {/* <Button>"Go back Home"</Button> */}
       </View>
       <TouchableOpacity style={styles.card}>
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   Username: {
     marginTop: 5,
     marginBottom: 5,
-    fontSize: 26,
+    fontSize: 20,
     alignSelf: "center",
     fontWeight: "bold",
   },
