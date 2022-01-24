@@ -13,6 +13,8 @@ import { ShotsScreen } from "../Screens/ShotWin";
 import { CameraScreen } from "../NavBar/Screen/Camerapage";
 import { TabBar } from "react-native-tab-view";
 import { Homeheader, CameraBtn } from "../Components/header";
+import LoginScreen from "./Screen/LoginScreen";
+import SignUpScreen from "./Screen/SignUpScreen";
 //Screens Names
 const Home = "Home";
 const Profile = "Profile";
@@ -93,7 +95,9 @@ const screenSetting = ({ route }) => ({
 function MainContainer() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="home">
+      <Stack.Navigator initialRouteName="login">
+        <Stack.Screen name='login' options={{ headerShown: false }} component={LoginScreen} />
+        <Stack.Screen name='Signup' options={{ headerShown: false }} component={SignUpScreen} />
         <Stack.Screen
           options={{ headerShown: false }}
           name="home"

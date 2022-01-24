@@ -14,6 +14,7 @@ export default class HomeScreen extends React.Component {
     };
   }
   componentDidMount() {
+    // to fetch data of Hotels in Carousel
     db.collection("Carousel")
       .get()
       .then((snapshot) => {
@@ -23,7 +24,7 @@ export default class HomeScreen extends React.Component {
         });
         this.setState({ CarouselData: temp });
       });
-    // this.setState({ data: getCard(this.state.data) });
+    // To fetch data of Hotels 
     db.collection("Hotel")
       .get()
       .then((snapshot) => {
@@ -35,7 +36,6 @@ export default class HomeScreen extends React.Component {
       });
   }
   render() {
-    // console.log(carouselData);
     return (
       <FlatList
         style={{ backgroundColor: "#fff" }}

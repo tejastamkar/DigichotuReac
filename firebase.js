@@ -21,15 +21,15 @@ Firebase.initializeApp(firebaseConfig);
 export const db = Firebase.firestore();
 export const auth = Firebase.auth();
 
-export function getCard(data) {
-  db.collection("Hotel")
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        data.push(doc.data());
-        //TODO ADD user name in doc.name every time user is created.
-      });
-    });
-  console.log(data);
-  return data;
-}
+// export function getCard(data) {
+//   db.collection("Hotel")
+//     .get()
+//     .then((querySnapshot) => {
+//       querySnapshot.forEach((doc) => {
+//         data.push(doc.data());
+//         //TODO ADD user name in doc.name every time user is created.
+//       });
+//     });
+//   console.log(data);
+//   return data;
+// }
